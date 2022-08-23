@@ -3,15 +3,99 @@
 }
 
 body{
-    background-color: aqua;
+    background-color: #f3f3f3;
     font-family: 'Roboto', sans-serif;
+}
+
+.overlay{
+    width: 375px;
+    height: 100%;
+    background-color: rgba(59, 58, 58, 0.5);
+    position: fixed;
+    z-index: 1;
 }
 
 .webpage{
     margin: 0 auto;
     width: 375px;
-    height: 667px;
-    background-color: red;
+    background-color: #f3f3f3;
+}
+
+.sidemenu{
+    width: 259px;
+    height: 100%;
+    position: fixed;
+    right: 0%;
+    background-color: white;
+}
+
+.chooseContacts{
+    height: 80px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts{
+    padding: 15px;
+}
+
+.contacts li{
+    height: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.contacts .icon{
+    font-size: 23px;
+}
+
+.contacts li p{
+    font-size: 16px;
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.chooseVisibility{
+    height: 80px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visibility{
+    padding-left: 15px;
+}
+
+.visibility li{
+    height: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.visibility .icon{
+    font-size: 23px;
+}
+
+.visibility li p{
+    font-size: 16px;
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.blankarea{
+
+    width: 116px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    z-index: 1;
 }
 
 .header{
@@ -24,20 +108,11 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    box-shadow: 0 1px 4px #dbdada;
-    z-index: 1;
+    box-shadow: 0 2px 2px #dbdada;
 }
 
 .header .icon{
     font-size: 42px;
-}
-
-.chat{
-    height: 507px;
-    width: 375px;
-    background-color: #f3f3f3;
-    position: fixed;
-    top: 80px;
 }
 
 .footer{
@@ -49,8 +124,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    box-shadow: 0 1px 4px #dbdada;
-    z-index: 1;
+    box-shadow: 0 2px 2px #dbdada;
 }
 
 .text-box{
@@ -68,7 +142,12 @@ body{
     cursor: pointer;
 }
 
+
 .footer .icon{
     font-size: 26px;
     margin-right: 17px;
+}
+
+.hidden{
+    display: none;
 }

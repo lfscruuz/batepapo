@@ -12,13 +12,53 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="overlay hidden">
+        <div class="sidemenu">
+            <div class="chooseContacts">
+                <p>
+                    Escolha um contato<br>para enviar uma mensagem:
+                </p>
+            </div>
+            <ul class="contacts">
+                <li>
+                    <ion-icon class="icon" name="people"></ion-icon>
+                    <p>Todos</p>
+                </li>
+                <li>
+                    <ion-icon class="icon" name="person-circle"></ion-icon>
+                    <p>João</p>
+                </li>
+                <li>
+                    <ion-icon class="icon" name="person-circle"></ion-icon>
+                    <p>Maria</p>
+                </li>
+            </ul>
+            <div class="chooseVisibility">
+                <p>
+                    Escolha a visibilidade:
+                </p>
+            </div>
+            <ul class="visibility">
+                <li>
+                    <ion-icon class="icon" name="lock-open"></ion-icon>
+                    <p>Público</p>
+                </li>
+                <li>
+                    <ion-icon class="icon" name="lock-closed"></ion-icon>
+                    <p>privado</p>
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="blankarea hidden"></div> -->
+    </div>
+    <div class="blankarea hidden" onclick="backToChat();" ></div>
     <div class="webpage">
         <div class="header">
             <img src="./imgs/logo 1.png" alt="logo">
-            <ion-icon class="icon" name="people"></ion-icon>
+            <ion-icon class="icon openSidemenu" name="people" onclick="sidemenu();"></ion-icon>
         </div>
         <div class="chat">
-            
+
         </div>
         <div class="footer">
             <input class="text-box" type="text" placeholder="escreva aqui...">
@@ -28,5 +68,6 @@
         </div>
     </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
