@@ -33,37 +33,50 @@
                     <p>Maria</p>
                 </li>
             </ul>
-            <div class="chooseVisibility">
+            <div class="visibilityText">
                 <p>
                     Escolha a visibilidade:
                 </p>
             </div>
-            <ul class="visibility">
+            <ul class="chooseVisibility">
                 <li>
-                    <ion-icon class="icon" name="lock-open"></ion-icon>
+                    <ion-icon class="icon" name="lock-open" onclick="chooseOpen(this);"></ion-icon>
                     <p>Público</p>
                 </li>
                 <li>
-                    <ion-icon class="icon" name="lock-closed"></ion-icon>
+                    <ion-icon class="icon" name="lock-closed" onclick="choosePrivate(this)"></ion-icon>
                     <p>privado</p>
                 </li>
             </ul>
         </div>
-        <!-- <div class="blankarea hidden"></div> -->
     </div>
-    <div class="blankarea hidden" onclick="backToChat();" ></div>
+    <div class="blankArea hidden" onclick="backToChat();" ></div>
     <div class="webpage">
         <div class="header">
             <img src="./imgs/logo 1.png" alt="logo">
             <ion-icon class="icon openSidemenu" name="people" onclick="sidemenu();"></ion-icon>
         </div>
-        <div class="chat">
-
-        </div>
+        <ul class="chat">
+            <li class="status">
+                <p><strong>João</strong> entra na sala</p>
+            </li>
+            <li class="open">
+                <p><strong>João</strong> para <strong>Todos</strong>: Bom dia</p>
+            </li>
+            <li class="open">
+                <p><strong>Maria</strong> para <strong>Todos</strong>: Oi João :)</p>
+            </li>
+            <li class="private">
+                <p><strong>João</strong> reservadamente para <strong>Maria</strong>: Oi gatinha quer tc?----------ablablabalb</p>
+            </li>
+            <li class="status">
+                <p><strong>Maria</strong> sai na sala</p>
+            </li>
+        </ul>
         <div class="footer">
-            <input class="text-box" type="text" placeholder="escreva aqui...">
+            <input class="textBox" type="text" placeholder="escreva aqui...">
             <button class="button">
-                <ion-icon class="icon" name="paper-plane-outline"></ion-icon>
+                <ion-icon class="icon" name="paper-plane-outline" onclick="sendMessage(this);"></ion-icon>
             </button>
         </div>
     </div>
