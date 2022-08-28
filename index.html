@@ -12,7 +12,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="overlay hidden">
+    <div class="overlay">
         <div class="sidemenu">
             <div class="chooseContacts">
                 <p>
@@ -20,18 +20,27 @@
                 </p>
             </div>
             <ul class="contacts">
-                <li>
-                    <ion-icon class="icon" name="people"></ion-icon>
-                    <p>Todos</p>
-                </li>
-                <li>
-                    <ion-icon class="icon" name="person-circle"></ion-icon>
-                    <p>João</p>
-                </li>
-                <li>
-                    <ion-icon class="icon" name="person-circle"></ion-icon>
-                    <p>Maria</p>
-                </li>
+                <div class="contact" onclick="chooseContact(this);">
+                    <li>
+                        <ion-icon class="icon" name="people"></ion-icon>
+                        <p>Todos</p>
+                    </li>
+                    <ion-icon class="checkmark hidden" name="checkmark-outline"></ion-icon>
+                </div>
+                <div class="contact" onclick="chooseContact(this);">
+                    <li>
+                        <ion-icon class="icon" name="person-circle"></ion-icon>
+                        <p>João</p>
+                    </li>
+                    <ion-icon class="checkmark hidden" name="checkmark-outline"></ion-icon>
+                </div>
+                <div class="contact" onclick="chooseContact(this);">
+                    <li>
+                        <ion-icon class="icon" name="person-circle"></ion-icon>
+                        <p>Maria</p>
+                    </li>
+                    <ion-icon class="checkmark hidden" name="checkmark-outline"></ion-icon>
+                </div>
             </ul>
             <div class="visibilityText">
                 <p>
@@ -39,18 +48,24 @@
                 </p>
             </div>
             <ul class="chooseVisibility">
-                <li>
-                    <ion-icon class="icon" name="lock-open" onclick="chooseOpen(this);"></ion-icon>
-                    <p>Público</p>
-                </li>
-                <li>
-                    <ion-icon class="icon" name="lock-closed" onclick="choosePrivate(this)"></ion-icon>
-                    <p>privado</p>
-                </li>
+                <div class="visibilityOptions" onclick="chooseOpen(this);">
+                    <li>
+                        <ion-icon class="icon" name="lock-open" ></ion-icon>
+                        <p>Público</p>
+                    </li>
+                    <ion-icon class="checkmark hidden" name="checkmark-outline"></ion-icon>
+                </div>
+                <div class="visibilityOptions" onclick="choosePrivate(this);">
+                    <li>
+                        <ion-icon class="icon" name="lock-closed"></ion-icon>
+                        <p>privado</p>
+                    </li>
+                    <ion-icon class="checkmark hidden" name="checkmark-outline"></ion-icon>
+                </div>
             </ul>
         </div>
     </div>
-    <div class="blankArea hidden" onclick="backToChat();" ></div>
+    <div class="blankArea" onclick="backToChat();" ></div>
     <div class="webpage">
         <div class="header">
             <img src="./imgs/logo 1.png" alt="logo">
@@ -80,6 +95,7 @@
             </button>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="script.js"></script>
 </body>

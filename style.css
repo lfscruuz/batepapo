@@ -13,24 +13,32 @@ strong{
 
 .overlay{
     width: 375px;
-    height: 100%;
+    height: auto;
     background-color: rgba(59, 58, 58, 0.5);
-    position: fixed;
+    position: absolute;
     z-index: 1;
 }
 
-.webpage{
-    margin: 0 auto;
-    width: 375px;
-    background-color: #f3f3f3;
+.blankArea{
+    width: 116px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    z-index: 1;
 }
 
 .sidemenu{
     width: 259px;
     height: 100%;
     position: fixed;
+    z-index: 1;
     right: 0%;
     background-color: white;
+}
+
+.checkmark{
+    color: green;
+    font-weight: 700;
 }
 
 .chooseContacts{
@@ -63,6 +71,12 @@ strong{
     font-weight: 400;
 }
 
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .visibilityText{
     height: 80px;
     font-size: 16px;
@@ -74,7 +88,7 @@ strong{
 }
 
 .chooseVisibility{
-    padding-left: 15px;
+    padding: 0 15px;
 }
 
 .chooseVisibility li{
@@ -93,13 +107,16 @@ strong{
     font-weight: 400;
 }
 
-.blankArea{
+.visibilityOptions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    width: 116px;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    z-index: 1;
+.webpage{
+    width: 375px;
+    height: auto;
+    background-color: #f3f3f3;
 }
 
 .header{
@@ -107,6 +124,7 @@ strong{
     height: 80px;
     background-color: white;
     position: fixed;
+    z-index: 0;
     top: 0%;
     display: flex;
     align-items: center;
@@ -120,13 +138,16 @@ strong{
 }
 
 .chat{
-    position: fixed;
-    top: 100px;
+    margin: 100px 0;
 }
 
 .chat > p{
     font-size: 14px;
     line-height: 80%;
+}
+
+.chat li{
+    padding-left: 10px;
 }
 
 .status{
