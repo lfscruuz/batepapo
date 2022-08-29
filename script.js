@@ -41,7 +41,12 @@ function login(){
         user = {
             name: username
         }
-        axios.post('https://mock-api.driven.com.br/api/v6/uol/participants', user);
+        const promise = axios.post('https://mock-api.driven.com.br/api/v6/uol/participants', user);
+        promise.catch(nameInUse)
+        function nameInUse(response){
+            response = alert('nome já cadastrado')
+            window.location.reload()
+        }
     }
 
     chat.innerHTML += `
@@ -52,7 +57,9 @@ function login(){
 }
 
 function statusUser(){
-    axios.post('https://mock-api.driven.com.br/api/v6/uol/status', user);
+        console.log(user)
+        axios.post('https://mock-api.driven.com.br/api/v6/uol/status', user);
+   
 }
 
 function getMessages(){
