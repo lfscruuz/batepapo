@@ -25,7 +25,7 @@
                         <ion-icon class="icon" name="people"></ion-icon>
                         <p>Todos</p>
                     </li>
-                    <ion-icon class="checkmark hidden" name="checkmark-outline"></ion-icon>
+                    <ion-icon class="checkmark" name="checkmark-outline"></ion-icon>
                 </div>
                 <div class="contact" onclick="chooseContact(this);">
                     <li>
@@ -48,14 +48,14 @@
                 </p>
             </div>
             <ul class="chooseVisibility">
-                <div class="visibilityOptions" onclick="chooseOpen(this);">
+                <div class="visibilityOptions visibilityOpen" onclick="chooseOpen('open');">
                     <li>
                         <ion-icon class="icon" name="lock-open" ></ion-icon>
                         <p>Público</p>
                     </li>
-                    <ion-icon class="checkmark hidden" name="checkmark-outline"></ion-icon>
+                    <ion-icon class="checkmark" name="checkmark-outline"></ion-icon>
                 </div>
-                <div class="visibilityOptions" onclick="choosePrivate(this);">
+                <div class="visibilityOptions visibilityPrivate" onclick="choosePrivate('private');">
                     <li>
                         <ion-icon class="icon" name="lock-closed"></ion-icon>
                         <p>privado</p>
@@ -64,8 +64,9 @@
                 </div>
             </ul>
         </div>
+        <div class="blankArea" onclick="backToChat();" ></div>
     </div>
-    <div class="blankArea" onclick="backToChat();" ></div>
+    
     <div class="webpage">
         <div class="header">
             <img src="./imgs/logo 1.png" alt="logo">
@@ -87,6 +88,7 @@
             <li class="status">
                 <p><strong>Maria</strong> sai na sala</p>
             </li>
+            
         </ul>
         <div class="footer">
             <input class="textBox" type="text" placeholder="escreva aqui...">

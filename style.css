@@ -13,25 +13,26 @@ strong{
 
 .overlay{
     width: 375px;
-    height: auto;
+    height: 100%;
     background-color: rgba(59, 58, 58, 0.5);
-    position: absolute;
+    position: fixed;
     z-index: 1;
 }
 
-.blankArea{
-    width: 116px;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    z-index: 1;
+.webpage{
+    width: 375px;
+    height: auto;
+    position: absolute;
+    z-index: 0;
+    background-color: #f3f3f3;
 }
 
 .sidemenu{
     width: 259px;
     height: 100%;
     position: fixed;
-    z-index: 1;
+    display: flex;
+    flex-direction: column;
     right: 0%;
     background-color: white;
 }
@@ -53,6 +54,8 @@ strong{
 
 .contacts{
     padding: 15px;
+    height: 50%;
+    overflow: scroll;
 }
 
 .contacts li{
@@ -113,10 +116,11 @@ strong{
     justify-content: space-between;
 }
 
-.webpage{
-    width: 375px;
-    height: auto;
-    background-color: #f3f3f3;
+.blankArea{
+    width: 116px;
+    height: 100%;
+    position: fixed;
+    left: 0;
 }
 
 .header{
@@ -124,7 +128,6 @@ strong{
     height: 80px;
     background-color: white;
     position: fixed;
-    z-index: 0;
     top: 0%;
     display: flex;
     align-items: center;
